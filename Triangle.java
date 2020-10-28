@@ -12,9 +12,9 @@ class Triangle {
 		v3 = c;
 	}
 	public String classify() {
-		double s1l = v1.distanceTo(v2);
-		double s2l = v1.distanceTo(v3);
-		double s3l = v2.distanceTo(v3);
+		double s1l = Math.round(10000 * v1.distanceTo(v2)) / 10000.0;
+		double s2l = Math.round(10000 * v1.distanceTo(v3)) / 10000.0;
+		double s3l = Math.round(10000 * v2.distanceTo(v3)) / 10000.0;
 		if (s1l == s2l) {
 			if (s3l == s1l) return "equilateral";
 			return "isosceles";
